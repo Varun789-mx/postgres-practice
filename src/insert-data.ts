@@ -10,5 +10,4 @@ async function createEntries() {
     await client.query(innertodotext, todovalues);
     console.log(`Entries created successfully`);
 }
-
 createEntries();
