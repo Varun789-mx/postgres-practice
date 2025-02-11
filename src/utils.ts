@@ -1,20 +1,13 @@
-import {Client} from "pg";
+import {Client} from "pg"
 
 export async function getclient() { 
-	try {
-	const client = new Client({connectionString:``});
-		if(!client) { 
-		console.error("error while creating client");
-	}
-	   
+	const client = new Client({ connectionString:'postgresql://postgres:harsh@localhost:5431/postgres'});
+	try { 
 		await client.connect();
-		console.log("Connection success");
-		return client;
+		console.log("Connection to db is succesfull");
 	}
-      catch(e) { 
-	console.error("Error occured while connecting to db",e);
-
+	catch(error) { 
+		console.log("Error occured in connection " + error);
+	}
+	return client;
 }
-}
-
-
