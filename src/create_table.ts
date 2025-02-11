@@ -16,7 +16,8 @@ async function createTable() {
     DESCRIPTION TEXT,
     USER_ID INTEGER REFERENCES users(id),
     done BOOLEAN DEFAULT FALSE 
-)`;
+);`
+;
   await client.query(createTodoquery);
   console.log("Tables created successfully");
 }
