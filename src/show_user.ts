@@ -1,7 +1,7 @@
 import {getclient} from "./utils"
 
 export async function Showusers() { 
-	const client = getclient();
+	const client = await getclient();
 	const showquery = `SELECT * FROM users `;
 	try { 
 		await client.query(showquery);
