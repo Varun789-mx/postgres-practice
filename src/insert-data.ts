@@ -1,15 +1,21 @@
 import {getclient} from "./utils"
-
-export async function Insertdata() { 
+interface uservalues { 
+	email:string,
+	password:string
+}
+export async function Insertdata(userdata:uservalues) { 
 	const client = await getclient();
     const insertquery = `INSERT INTO users (email,password) values ($1,$2)`;
-    const uservalues = [`Hpandey057@gmail`,`Randompass`];
+    const uservalues = [userdata.email,userdata.password];
 	try { 
 	  await client.query(insertquery,uservalues);
-          console.log("User added succesfully");
+          console.log("User added succesully");
 	}
 	catch(e) { 
-		console.error("Error in adding user to db"+e);
+		console.error(`Error in adding user to db ${e}`);
 	}
+	finally { 
+		await client.release();
+	}
+
 }
-Insertdata();
