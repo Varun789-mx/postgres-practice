@@ -7,7 +7,7 @@ export async function getclient() {
 		console.log("Connection to db is succesfull");
 	}
 	catch(error) { 
-		console.log("Error occured in connection " + error);
+		console.error("Error occured in connection " + error);
 	}
 	return client;
 }
