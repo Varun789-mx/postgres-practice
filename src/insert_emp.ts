@@ -23,4 +23,4 @@ export async function Insertemp(prop:Employee) {
 	}
 }
 
-Inseremp({name:Harsh,email:"Hpandey057@gmail.com",mobile:"9711018780",salary:100000.00});
+Insertemp({name:"Harsh",email:"Hpandey057@gmail.com",mobile:"9711018780",salary:100000.00});
