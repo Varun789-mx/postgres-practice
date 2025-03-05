@@ -15,3 +15,5 @@
               client.end();
           }
   }
+
+  Show();

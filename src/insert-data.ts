@@ -15,7 +15,7 @@ export async function Insertdata(userdata:uservalues) {
 		console.error(`Error in adding user to db ${e}`);
 	}
 	finally { 
-		await client.release();
+		await client.end();
 	}
 
 }
