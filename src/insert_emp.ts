@@ -23,4 +23,6 @@ export async function Insertemp(prop:Employee) {
 	}
 }
 
-Insertemp({name:"Harsh",email:"Hpandey057@gmail.com",mobile:"9711018780",salary:100000.00});
+const insertprop:Employee[] = [{name:"Varun",email:"Varunsh153@gmail.com",mobile:"9711038780",salary:200000.00}]
+
+Insertemp(insertprop);
